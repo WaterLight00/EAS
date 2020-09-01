@@ -5,32 +5,41 @@ function createGridElemnts(numberOfBoxes){
     const container = document.querySelector('.container');
     for (let index = 0; index < totalBoxes; index++) {
         const box = document.createElement('div');
-        box.classList.add('box')
+        box.classList.add('box');
         box.textContent = ".";
         box.classList.add('boxColor');
-        // box.style['background-color']="white";
-        // box.style['color']="white";
         container.appendChild(box);
-        //box.style['gridColumn']=index+'/'+index;
-        //box.style['gridRow']=`${index}/${index}`;
     }
 };
-createGridElemnts(numberOfBoxes);
 
 function changeBoxColor(){
     const boxes = document.querySelectorAll('.box');
-
+    
     boxes.forEach((box) => {
-
+        
         box.addEventListener('mouseover', function (e){
             box.classList.remove('boxColor');
-            // box.removeAttribute('color');
-            // box.removeAttribute('background-color');
             box.classList.add('colored');
-        
+            
+        });
     });
-});
 }
-
-changeBoxColor();
-
+//resets the coloring pad 
+//should also allow to reset pad size
+function resetPad(){
+    const btn = document.querySelector('#resetbtn');
+    const boxes = document.querySelectorAll('.box');
+    btn.addEventListener(
+        'click', () =>{
+            boxes.forEach((box) => {
+                    box.classList.remove('colored');
+                    box.classList.add('boxColor');
+                });
+        }
+        );
+        
+    };
+    
+    createGridElemnts(numberOfBoxes);
+    changeBoxColor();
+    resetPad();
