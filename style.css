@@ -18,6 +18,10 @@ html{
     color:lightskyblue;
     background-color: lightskyblue;
 }
+.button{
+    display: flex;
+    justify-content: center;
+}
 /* .box{
     grid-column:1/1;
     grid-row:1/1;
