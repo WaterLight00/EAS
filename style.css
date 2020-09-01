@@ -3,8 +3,9 @@ html{
 }
 .container{
     display: grid;
-    grid-template-columns: repeat(16, auto); 
-    grid-template-rows: repeat(16, auto);
+    grid-template-columns: repeat(16, auto);
+    grid-auto-rows: auto;
+    /* grid-template-rows: repeat(16, auto); */
     justify-content:center;
 }
 
@@ -12,7 +13,7 @@ html{
     color: lightsalmon;
     background-color: lightskyblue;
 }
-.box{
+/* .box{
     grid-column:1/1;
     grid-row:1/1;
-}
+} */

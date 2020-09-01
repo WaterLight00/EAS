@@ -6,10 +6,10 @@ function createGridElemnts(numberOfBoxes){
     for (let index = 1; index < totalBoxes; index++) {
         const box = document.createElement('div');
         box.classList.add('box')
-        box.textContent = index;
+        box.textContent = " .";
         container.appendChild(box);
-        box.style['gridColumn']=index+'/'+index;
-        box.style['gridRow']=`${index}/${index}`;
+        //box.style['gridColumn']=index+'/'+index;
+        //box.style['gridRow']=`${index}/${index}`;
     }
 };
 createGridElemnts(numberOfBoxes);
