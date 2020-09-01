@@ -1,3 +1,18 @@
 html{
-    background: red;
+    background: lightgray;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(16, auto); 
+    grid-template-rows: repeat(16, auto);
+    justify-content:center;
+}
+
+.colored{
+    color: lightsalmon;
+    background-color: lightskyblue;
+}
+.box{
+    grid-column:1/1;
+    grid-row:1/1;
 }
