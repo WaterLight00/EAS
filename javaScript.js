@@ -1,6 +1,6 @@
-let numberOfBoxes = prompt("specify number of boxes");
 
-function createGridElemnts(numberOfBoxes){
+function createGridElemnts(){
+    let numberOfBoxes = prompt("specify number of boxes");
     let totalBoxes = numberOfBoxes**2;
     const container = document.querySelector('.container');
     for (let index = 0; index < totalBoxes; index++) {
@@ -9,7 +9,8 @@ function createGridElemnts(numberOfBoxes){
         box.textContent = ".";
         box.classList.add('boxColor');
         container.appendChild(box);
-    }
+        
+    };
 };
 
 function changeBoxColor(){
@@ -27,19 +28,17 @@ function changeBoxColor(){
 //resets the coloring pad 
 //should also allow to reset pad size
 function resetPad(){
-    const btn = document.querySelector('#resetbtn');
     const boxes = document.querySelectorAll('.box');
-    btn.addEventListener(
-        'click', () =>{
-            boxes.forEach((box) => {
-                    box.classList.remove('colored');
-                    box.classList.add('boxColor');
-                });
-        }
-        );
-        
+    boxes.forEach((box) => {
+        box.classList.remove('colored');
+        box.classList.add('boxColor');
+
+
+    });
+    
     };
     
-    createGridElemnts(numberOfBoxes);
+    createGridElemnts();
     changeBoxColor();
-    resetPad();
+    const btn = document.querySelector('#resetbtn');
+    btn.addEventListener('click', resetPad);

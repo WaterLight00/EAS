@@ -5,8 +5,6 @@ html{
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-auto-rows: auto;
-    /* grid-gap:1em; */
-    /* grid-template-rows: repeat(16, auto); */
     justify-content:center;
     border: 1px solid black;
 }
@@ -22,7 +20,3 @@ html{
     display: flex;
     justify-content: center;
 }
-/* .box{
-    grid-column:1/1;
-    grid-row:1/1;
-} */
