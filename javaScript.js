@@ -11,6 +11,7 @@ function createGridElemnts(){
         container.appendChild(box);
         
     };
+changeBoxColor();
 };
 
 function changeBoxColor(){
@@ -26,7 +27,6 @@ function changeBoxColor(){
     });
 }
 //resets the coloring pad 
-//should also allow to reset pad size
 function resetPad(){
     const boxes = document.querySelectorAll('.box');
     boxes.forEach((box) => {
@@ -38,7 +38,10 @@ function resetPad(){
     
     };
     
-    createGridElemnts();
-    changeBoxColor();
-    const btn = document.querySelector('#resetbtn');
-    btn.addEventListener('click', resetPad);
+   
+    const resetBtn = document.querySelector('#resetbtn');
+    const newPadBtn = document.querySelector('#createbtn');
+    resetBtn.addEventListener('click', resetPad);
+    newPadBtn.addEventListener('click', createGridElemnts);
+    
+
